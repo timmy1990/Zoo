@@ -54,11 +54,12 @@ public class gpsPlug {
         };
 
         if (unityContext.checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && unityContext.checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-        }
-        try {
-            locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 1, locationListener);
-        } catch (Exception e){
-            Log.e("ZOORINO GPSAKTIVIERUNGSFEHLER", "" + e);
+
+            try {
+                locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 1000, 1, locationListener);
+            } catch (Exception e){
+                Log.e("ZOORINO GPSAKTIVIERUNGSFEHLER", "" + e);
+            }
         }
         return "end of prepareGPS";
     }
@@ -77,6 +78,10 @@ public class gpsPlug {
     public double[] giveGPSData() {
         double[] gps = {locationLat, locationLon};
         return gps;
+    }
+
+    public void deavtivateGPS(){
+
     }
 
 }

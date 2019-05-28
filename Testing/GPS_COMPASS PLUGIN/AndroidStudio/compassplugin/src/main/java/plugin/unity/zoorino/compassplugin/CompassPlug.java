@@ -18,17 +18,19 @@ public class CompassPlug implements SensorEventListener {
 
     public CompassPlug() {}
 
+    // Method to activate the compass sensor by passing
+    // -> arguments: context of active activity
+    // -> return: String with report of activation status
     public String activateCompass(Context unityContext){
         // Initialisation of the compass
         sensorManager = (SensorManager) unityContext.getSystemService(SENSOR_SERVICE);
         compass = sensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
         if (compass != null) {
-            Log.i("ZOORINO: COMPASS: ", "Aktivierung erfolgt");
             sensorManager.registerListener(this, compass, SensorManager.SENSOR_DELAY_GAME);
         } else {
-            return "sensorManager = null";
+            return "ZOORINO COMPASS ACTIVATION FAILED - sensorManager == null";
         }
-        return "Compass Aktivierung Erfolg";
+        return "ZOORINO COMPASS ACTIVATION SUCCESS";
     }
 
     // Interface method for actions when Sensor is changed
@@ -40,13 +42,19 @@ public class CompassPlug implements SensorEventListener {
         // create a rotation animation (reverse turn degree degrees)
         currentDegree = Math.round(event.values[0]);
 
-        Log.i("ZOORINO: COMPASS","Rotation = " + currentDegree);
-        //float rotationDiff = posCalc.rotateDiff(-degree);
+        //Log.i("ZOORINO: COMPASS","Rotation = " + currentDegree);
     }
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) { }
 
+    // Method for deactivating the compass if it is not used anymore or application finishes
+    public String deactivateCompass(){
+        sensorManager.unregisterListener(this, compass);
+        return "ZOORINO: COMPASS DEACTIVATED";
+    }
+
+    // Method for returning the current Degree of the compass.
     public double getDegree(){
         return currentDegree;
     }
