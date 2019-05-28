@@ -1,9 +1,12 @@
 
 {
-	"buildFiles" : [ "/Volumes/Macintosh HD 2/Plugin/app/CMakeLists.txt" ],
+	"buildFiles" : 
+	[
+		"/Volumes/Macintosh HD 2/Zoorino GIT REPO/Zoo/Testing/GPS_COMPASS PLUGIN/AndroidStudio/app/CMakeLists.txt"
+	],
 	"cleanCommands" : 
 	[
-		"/Users/philipp/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Volumes/Macintosh\\ HD\\ 2/Plugin/app/.externalNativeBuild/cmake/release/arm64-v8a --target clean"
+		"/Users/philipp/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Volumes/Macintosh\\ HD\\ 2/Zoorino\\ GIT\\ REPO/Zoo/Testing/GPS_COMPASS\\ PLUGIN/AndroidStudio/app/.externalNativeBuild/cmake/release/arm64-v8a --target clean"
 	],
 	"cppFileExtensions" : [ "cpp" ],
 	"libraries" : 
@@ -12,18 +15,18 @@
 		{
 			"abi" : "arm64-v8a",
 			"artifactName" : "native-lib",
-			"buildCommand" : "/Users/philipp/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Volumes/Macintosh\\ HD\\ 2/Plugin/app/.externalNativeBuild/cmake/release/arm64-v8a --target native-lib",
+			"buildCommand" : "/Users/philipp/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Volumes/Macintosh\\ HD\\ 2/Zoorino\\ GIT\\ REPO/Zoo/Testing/GPS_COMPASS\\ PLUGIN/AndroidStudio/app/.externalNativeBuild/cmake/release/arm64-v8a --target native-lib",
 			"buildType" : "release",
 			"files" : 
 			[
 				
 				{
 					"flags" : "  --target=aarch64-none-linux-android24 --gcc-toolchain=/Users/philipp/Library/Android/sdk/ndk-bundle/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64 --sysroot=/Users/philipp/Library/Android/sdk/ndk-bundle/sysroot  -Dnative_lib_EXPORTS -isystem /Users/philipp/Library/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++/include -isystem /Users/philipp/Library/Android/sdk/ndk-bundle/sources/cxx-stl/llvm-libc++abi/include  -isystem /Users/philipp/Library/Android/sdk/ndk-bundle/sysroot/usr/include/aarch64-linux-android -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c++11  -O2 -DNDEBUG  -fPIC    -c ",
-					"src" : "/Volumes/Macintosh HD 2/Plugin/app/src/main/cpp/native-lib.cpp",
-					"workingDirectory" : "/Volumes/Macintosh HD 2/Plugin/app/.externalNativeBuild/cmake/release/arm64-v8a"
+					"src" : "/Volumes/Macintosh HD 2/Zoorino GIT REPO/Zoo/Testing/GPS_COMPASS PLUGIN/AndroidStudio/app/src/main/cpp/native-lib.cpp",
+					"workingDirectory" : "/Volumes/Macintosh HD 2/Zoorino GIT REPO/Zoo/Testing/GPS_COMPASS PLUGIN/AndroidStudio/app/.externalNativeBuild/cmake/release/arm64-v8a"
 				}
 			],
-			"output" : "/Volumes/Macintosh HD 2/Plugin/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so",
+			"output" : "/Volumes/Macintosh HD 2/Zoorino GIT REPO/Zoo/Testing/GPS_COMPASS PLUGIN/AndroidStudio/app/build/intermediates/cmake/release/obj/arm64-v8a/libnative-lib.so",
 			"toolchain" : "10546948497864313536"
 		}
 	},

@@ -1,10 +1,10 @@
 Executable : /Users/philipp/Library/Android/sdk/cmake/3.6.4111459/bin/cmake
 arguments : 
--H/Volumes/Macintosh HD 2/Plugin/app
--B/Volumes/Macintosh HD 2/Plugin/app/.externalNativeBuild/cmake/debug/arm64-v8a
+-H/Volumes/Macintosh HD 2/Zoorino GIT REPO/Zoo/Testing/GPS_COMPASS PLUGIN/AndroidStudio/app
+-B/Volumes/Macintosh HD 2/Zoorino GIT REPO/Zoo/Testing/GPS_COMPASS PLUGIN/AndroidStudio/app/.externalNativeBuild/cmake/debug/arm64-v8a
 -DANDROID_ABI=arm64-v8a
 -DANDROID_PLATFORM=android-24
--DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/Volumes/Macintosh HD 2/Plugin/app/build/intermediates/cmake/debug/obj/arm64-v8a
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/Volumes/Macintosh HD 2/Zoorino GIT REPO/Zoo/Testing/GPS_COMPASS PLUGIN/AndroidStudio/app/build/intermediates/cmake/debug/obj/arm64-v8a
 -DCMAKE_BUILD_TYPE=Debug
 -DANDROID_NDK=/Users/philipp/Library/Android/sdk/ndk-bundle
 -DCMAKE_CXX_FLAGS=
