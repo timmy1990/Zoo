@@ -40,20 +40,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="gpsPlug.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="gpsPlug.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/gpsplugin/src/main/java/plugin/unity/zoorino/gpsplugin/gpsPlug.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
-              <caret line="10" column="55" lean-forward="true" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CompassPlug.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CompassPlug.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/compassplugin/src/main/java/plugin/unity/zoorino/compassplugin/CompassPlug.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="41" selection-start-line="41" selection-end-line="41" selection-end-column="68" />
+            <state relative-caret-position="413">
+              <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2225#2226#0" expanded="true" />
@@ -4784,8 +4787,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/compassplugin/src/main/java/plugin/unity/zoorino/compassplugin/CompassPlug.java" />
         <option value="$PROJECT_DIR$/gpsplugin/src/main/java/plugin/unity/zoorino/gpsplugin/gpsPlug.java" />
+        <option value="$PROJECT_DIR$/compassplugin/src/main/java/plugin/unity/zoorino/compassplugin/CompassPlug.java" />
       </list>
     </option>
   </component>
@@ -5014,22 +5017,25 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/gpsplugin/src/main/java/plugin/unity/zoorino/gpsplugin/gpsPlug.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/compassplugin/src/main/java/plugin/unity/zoorino/compassplugin/CompassPlug.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="41" selection-start-line="41" selection-end-line="41" selection-end-column="68" />
+        <state relative-caret-position="413">
+          <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2225#2226#0" expanded="true" />
             <element signature="e#2261#2262#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gpsplugin/src/main/java/plugin/unity/zoorino/gpsplugin/gpsPlug.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="10" column="55" lean-forward="true" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
         </state>
       </provider>
     </entry>

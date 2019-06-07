@@ -21,6 +21,8 @@ public class CompassPlug implements SensorEventListener {
     // Method to activate the compass sensor by passing
     // -> arguments: context of active activity
     // -> return: String with report of activation status
+    // Might be a solution as well
+    // https://stackoverflow.com/questions/10192057/android-getorientation-method-returns-bad-results
     public String activateCompass(Context unityContext){
         // Initialisation of the compass
         sensorManager = (SensorManager) unityContext.getSystemService(SENSOR_SERVICE);
