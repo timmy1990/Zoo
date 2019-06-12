@@ -1,0 +1,4 @@
+#Wed Jun 12 22:40:52 CEST 2019
+base.0=/Volumes/Macintosh HD 2/Zoorino GIT REPO/Zoo/MASTER/ZooMstr/ZooMaster/Temp/gradleOut/build/intermediates/transforms/dexMerger/release/0
+path.0=classes.dex
+renamed.0=classes.dex
