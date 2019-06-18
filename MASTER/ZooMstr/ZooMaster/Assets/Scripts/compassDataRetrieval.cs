@@ -20,7 +20,6 @@ public class compassDataRetrieval : MonoBehaviour
         AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
         AndroidJavaObject context = activity.Call<AndroidJavaObject>("getApplicationContext");
 
-        
         if (context == null){
             Debug.Log("Zoorino: context ist null");
         } else {

@@ -4,22 +4,28 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Android;
 
-public class GPSDataRetrieval : MonoBehaviour
-{
+public class GPSDataRetrieval : MonoBehaviour {
 public Text textobject;
 public Text updateGPStext;
 public AndroidJavaObject gpsInstance;
 public AndroidJavaObject contextUnit;
+private Rigidbody rigi;
 
 // Variables for Coordinatetransformation - coordiantes tafelfeldstraße 69
-double tmplat = 49.4389415;
-double tmplon = 11.0768057;
+double tmplat = 49.448380;
+double tmplon = 11.096157;
 private CoordinateUtilities coordUtil;
+double tmpDegree = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-        coordUtil = new CoordinateUtilities(49.4389415, 11.0768057, 50.00);
+        rigi = GetComponent<Rigidbody>();
+        Abcd tmpabcd = new Abcd();
+        Debug.Log("TEST VON ABCD: " + tmpabcd.returnNbr(23.00));
+        Debug.Log("TEST VON ABCD: " + tmpabcd.sds + " " + tmpabcd.pi);
+
+        coordUtil = new CoordinateUtilities(tmplat, tmplon, 50.00);
         // Call for Location Permission
         if (!Permission.HasUserAuthorizedPermission("android.permission.ACCESS_FINE_LOCATION"))
         {
@@ -39,13 +45,11 @@ private CoordinateUtilities coordUtil;
             Debug.Log("Zoorino: Plugin geladen"); 
         } 
         
-
         // Get UnityActivity and Context
         AndroidJavaClass unityPlayer = new AndroidJavaClass("com.unity3d.player.UnityPlayer");
         AndroidJavaObject activity = unityPlayer.GetStatic<AndroidJavaObject>("currentActivity");
         AndroidJavaObject context = activity.Call<AndroidJavaObject>("getApplicationContext");
         
-        //contextUnit = context;
         if (context == null){
             textobject.text = "Zoorino: context ist null";
         } else {
@@ -64,12 +68,19 @@ private CoordinateUtilities coordUtil;
     public void giveGPSData(){
         double[] tmpDoubArr = gpsInstance.Call<double[]>("giveGPSData");
         updateGPStext.text = "GPS: Lat: " + tmpDoubArr[0] + ", Lon: " + tmpDoubArr[1];
-        coordUtil.geo_to_enu();
+        double[] enu = coordUtil.geo_to_enu(tmpDoubArr[0], tmpDoubArr[1], 50.00);
+        updateGPStext.text = "ENU: X: " + tmpDoubArr[0] + ", Y: " + tmpDoubArr[1];
 
+        Vector3 movement = new Vector3(tmpDoubArr[0], 0, tmpDoubArr[1]);
+        rigi.MovePosition(transform.position + movement);
     }
 
+    // rotation utility
+    double calcRotation(double degree) {
+        
+        return degree
+    }
     // Update is called once per frame
     void Update()  {
-        
     }
 }
