@@ -6,21 +6,15 @@ using UnityEngine;
 public class CoordinateUtilities : MonoBehaviour
 {
     static double a = 6378137;
-
-    //  WGS-84 Earth semimajor axis (m)
-    static double b = 6356752.314245;
-
-    //  Derived Earth semiminor axis (m)
-    static double f = ((a - b) / a);
-
-    //  Ellipsoid Flatness
-    static double e_sq = (f * (2 - f));
+    static double b = 6356752.314245; //  WGS-84 Earth semimajor axis (m)
+    static double f = ((a - b) / a); //  Derived Earth semiminor axis (m)
+    static double e_sq = (f * (2 - f)); //  Ellipsoid Flatness
 
     //  Square of Eccentricity
     //  Center Koordinates of calculated Area
     private double centerLat;
     private double centerLon;
-    private static double centerAlt;
+    private double centerAlt;
 
     //  311// WGS84 46.87;        // Meters
     // private static double centerLat = 49.448256;    // Degrees
@@ -29,16 +23,15 @@ public class CoordinateUtilities : MonoBehaviour
     {
         this.centerLat = lat;
         this.centerLon = lon;
-        centerAlt = alt;
+        this.centerAlt = alt;
     }
 
     //  Wrapper for both geo2ecef And ecef2enu
     //  Input Arguments: current poSintion latitude, current poSintion longitude, current poSintion altitude
     public double[] geo_to_enu(double lat, double lon, double alt)
     {
-        double[] ecef = CoordinateUtilities.geo_to_ecef(lat, lon, alt);
-        double[] enu = this.ecef_to_enu(ecef[0], ecef[1], ecef[2], this.centerLat, this.centerLon, centerAlt);
-        // Log.i("ENU in geo2enu func","X = " + enu[0] + ", Y = " + enu[1] + ", Z = " + enu[2]);
+        double[] ecef = geo_to_ecef(lat, lon, alt);
+        double[] enu = ecef_to_enu(ecef[0], ecef[1], ecef[2], this.centerLat, this.centerLon, centerAlt);
         return enu;
     }
 
@@ -56,36 +49,17 @@ public class CoordinateUtilities : MonoBehaviour
         double Cos_lambda = Math.Cos(lambda);
         double Cos_phi = Math.Cos(phi);
         double Sinn_phi = Math.Sin(phi);
-        double x0 = ((h0 + N)
-                    * (Cos_lambda * Cos_phi));
-        double y0 = ((h0 + N)
-                    * (Cos_lambda * Sinn_phi));
-        double z0 = ((h0
-                    + ((1 - e_sq)
-                    * N))
-                    * Sinn_lambda);
+        double x0 = ((h0 + N) * (Cos_lambda * Cos_phi));
+        double y0 = ((h0 + N) * (Cos_lambda * Sinn_phi));
+        double z0 = ((h0 + ((1 - e_sq)* N))* Sinn_lambda);
         double xd = (x - x0);
         double yd = (y - y0);
         double zd = (z - z0);
         //  This is the matrix multiplication
-        double xEast = (((Sinn_phi * xd)
-                    * -1)
-                    + (Cos_phi * yd));
-        double yNorth = ((((Cos_phi
-                    * (Sinn_lambda * xd))
-                    - (Sinn_lambda
-                    * (Sinn_phi * yd)))
-                    * -1)
-                    + (Cos_lambda * zd));
-        double zUp = ((Cos_lambda
-                    * (Cos_phi * xd))
-                    + ((Cos_lambda
-                    * (Sinn_phi * yd))
-                    + (Sinn_lambda * zd)));
-        double[] enu = new double[] {
-                xEast,
-                yNorth,
-                zUp};
+        double xEast = (((Sinn_phi * xd) * -1) + (Cos_phi * yd));
+        double yNorth = ((((Cos_phi * (Sinn_lambda * xd))- (Sinn_lambda * (Sinn_phi * yd)))* -1)+ (Cos_lambda * zd));
+        double zUp = ((Cos_lambda * (Cos_phi * xd)) + ((Cos_lambda * (Sinn_phi * yd))+ (Sinn_lambda * zd)));
+        double[] enu = new double[] { xEast, yNorth, zUp};
         return enu;
     }
 

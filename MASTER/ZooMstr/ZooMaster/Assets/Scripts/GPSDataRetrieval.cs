@@ -11,9 +11,15 @@ public Text updateGPStext;
 public AndroidJavaObject gpsInstance;
 public AndroidJavaObject contextUnit;
 
+// Variables for Coordinatetransformation - coordiantes tafelfeldstraße 69
+double tmplat = 49.4389415;
+double tmplon = 11.0768057;
+private CoordinateUtilities coordUtil;
+
     // Start is called before the first frame update
     void Start()
     {
+        coordUtil = new CoordinateUtilities(49.4389415, 11.0768057, 50.00);
         // Call for Location Permission
         if (!Permission.HasUserAuthorizedPermission("android.permission.ACCESS_FINE_LOCATION"))
         {
@@ -58,6 +64,8 @@ public AndroidJavaObject contextUnit;
     public void giveGPSData(){
         double[] tmpDoubArr = gpsInstance.Call<double[]>("giveGPSData");
         updateGPStext.text = "GPS: Lat: " + tmpDoubArr[0] + ", Lon: " + tmpDoubArr[1];
+        coordUtil.geo_to_enu();
+
     }
 
     // Update is called once per frame
