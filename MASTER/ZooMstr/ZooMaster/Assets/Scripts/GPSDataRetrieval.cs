@@ -77,8 +77,8 @@ double tmpDegree = 0;
 
     // rotation utility
     double calcRotation(double degree) {
-        
-        return degree
+
+        return degree;
     }
     // Update is called once per frame
     void Update()  {
