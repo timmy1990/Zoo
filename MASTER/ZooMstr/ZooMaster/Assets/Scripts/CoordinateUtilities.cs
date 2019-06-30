@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CoordinateUtilities : MonoBehaviour
+public class CoordinateUtilities
 {
     static double a = 6378137;
     static double b = 6356752.314245; //  WGS-84 Earth semimajor axis (m)

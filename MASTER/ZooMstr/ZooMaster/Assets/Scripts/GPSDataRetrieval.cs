@@ -11,21 +11,25 @@ public AndroidJavaObject gpsInstance;
 public AndroidJavaObject contextUnit;
 private Rigidbody rigi;
 
-// Variables for Coordinatetransformation - coordiantes tafelfeldstraße 69
-double tmplat = 49.448380;
-double tmplon = 11.096157;
+// Variables for Coordinatetransformation - Entrance Zoo Nürnberg
+double tmplat = 49.450199;
+double tmplon = 11.139338;
 private CoordinateUtilities coordUtil;
 double tmpDegree = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        // get reference to player Instance for transformations
         rigi = GetComponent<Rigidbody>();
-        Abcd tmpabcd = new Abcd();
-        Debug.Log("TEST VON ABCD: " + tmpabcd.returnNbr(23.00));
-        Debug.Log("TEST VON ABCD: " + tmpabcd.sds + " " + tmpabcd.pi);
 
-        coordUtil = new CoordinateUtilities(tmplat, tmplon, 50.00);
+        // Initialize with Startpoint
+        coordUtil = new CoordinateUtilities(tmplat, tmplon, 0.00);
+
+        // Testing if it works
+        double[] enu2 = coordUtil.geo_to_enu(tmplat, tmplon, 0.00);
+        Debug.Log("ENU: X: " + enu2[0] + ", Y: " + enu2[1]);
+
         // Call for Location Permission
         if (!Permission.HasUserAuthorizedPermission("android.permission.ACCESS_FINE_LOCATION"))
         {
@@ -66,19 +70,23 @@ double tmpDegree = 0;
     }
 
     public void giveGPSData(){
+        // Call Plugin for GPS Data
         double[] tmpDoubArr = gpsInstance.Call<double[]>("giveGPSData");
         updateGPStext.text = "GPS: Lat: " + tmpDoubArr[0] + ", Lon: " + tmpDoubArr[1];
-        double[] enu = coordUtil.geo_to_enu(tmpDoubArr[0], tmpDoubArr[1], 50.00);
-        updateGPStext.text = "ENU: X: " + tmpDoubArr[0] + ", Y: " + tmpDoubArr[1];
+        // Convert GPS Data into local coordinates
+        double[] enu = coordUtil.geo_to_enu(tmpDoubArr[0], tmpDoubArr[1], 0.00);
+        updateGPStext.text = "ENU: X: " + enu[0] + ", Y: " + enu[1];
 
-        Vector3 movement = new Vector3(tmpDoubArr[0], 0, tmpDoubArr[1]);
+        // Set Position of Player Instance
+        // Alternate: rigi.position for non-interpolatet movement between positions
+        Vector3 movement = new Vector3((float)tmpDoubArr[0], 0, (float)tmpDoubArr[1]);
         rigi.MovePosition(transform.position + movement);
     }
 
     // rotation utility
     double calcRotation(double degree) {
         
-        return degree
+        return degree;
     }
     // Update is called once per frame
     void Update()  {

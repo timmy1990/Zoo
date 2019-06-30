@@ -4,15 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Android;
 
-public class compassDataRetrieval : MonoBehaviour
-{
+public class compassDataRetrieval : MonoBehaviour {
+    
     public AndroidJavaObject compassInstance;
     public AndroidJavaObject contextUnit;
     public Text textobject;
+    private Rigidbody rigi;
 
     // Start is called before the first frame update
     void Start()
     {
+        rigi = GetComponent<Rigidbody>();
         compassInstance = new AndroidJavaObject("plugin.unity.zoorino.compassplugin.CompassPlug");
         
         // Get UnityActivity and Context
