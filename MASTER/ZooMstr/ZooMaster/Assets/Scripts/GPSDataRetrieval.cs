@@ -85,11 +85,6 @@ double tmpDegree = 0;
 
     // rotation utility
     double calcRotation(double degree) {
-<<<<<<< HEAD
-        
-=======
-
->>>>>>> 0dd976a6183a834163311a6196c6bc9af6690d95
         return degree;
     }
     // Update is called once per frame
