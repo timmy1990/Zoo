@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "/Volumes/Macintosh HD 2/Zoorino GIT REPO/Zoo/Testing/GPS_COMPASS PLUGIN/AndroidStudio/app/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/philipp/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Volumes/Macintosh\\ HD\\ 2/Zoorino\\ GIT\\ REPO/Zoo/Testing/GPS_COMPASS\\ PLUGIN/AndroidStudio/app/.externalNativeBuild/cmake/debug/armeabi-v7a --target clean"
+  ],
+  "libraries": {
+    "native-lib-Debug-armeabi-v7a": {
+      "artifactName": "native-lib",
+      "buildCommand": "/Users/philipp/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Volumes/Macintosh\\ HD\\ 2/Zoorino\\ GIT\\ REPO/Zoo/Testing/GPS_COMPASS\\ PLUGIN/AndroidStudio/app/.externalNativeBuild/cmake/debug/armeabi-v7a --target native-lib",
+      "abi": "armeabi-v7a",
+      "output": "/Volumes/Macintosh HD 2/Zoorino GIT REPO/Zoo/Testing/GPS_COMPASS PLUGIN/AndroidStudio/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so"
+    }
+  }
+}

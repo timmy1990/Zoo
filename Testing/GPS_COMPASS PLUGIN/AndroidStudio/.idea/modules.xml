@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidStudio.iml" filepath="$PROJECT_DIR$/AndroidStudio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/compassplugin/compassplugin.iml" filepath="$PROJECT_DIR$/compassplugin/compassplugin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gps/gps.iml" filepath="$PROJECT_DIR$/gps/gps.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gpsplug/gpsplug.iml" filepath="$PROJECT_DIR$/gpsplug/gpsplug.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gpsplugin/gpsplugin.iml" filepath="$PROJECT_DIR$/gpsplugin/gpsplugin.iml" />
+    </modules>
+  </component>
+</project>

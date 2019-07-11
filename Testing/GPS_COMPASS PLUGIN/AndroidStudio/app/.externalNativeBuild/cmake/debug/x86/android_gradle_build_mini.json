@@ -1,0 +1,16 @@
+{
+  "buildFiles": [
+    "/Volumes/Macintosh HD 2/Zoorino GIT REPO/Zoo/Testing/GPS_COMPASS PLUGIN/AndroidStudio/app/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/philipp/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Volumes/Macintosh\\ HD\\ 2/Zoorino\\ GIT\\ REPO/Zoo/Testing/GPS_COMPASS\\ PLUGIN/AndroidStudio/app/.externalNativeBuild/cmake/debug/x86 --target clean"
+  ],
+  "libraries": {
+    "native-lib-Debug-x86": {
+      "artifactName": "native-lib",
+      "buildCommand": "/Users/philipp/Library/Android/sdk/cmake/3.6.4111459/bin/cmake --build /Volumes/Macintosh\\ HD\\ 2/Zoorino\\ GIT\\ REPO/Zoo/Testing/GPS_COMPASS\\ PLUGIN/AndroidStudio/app/.externalNativeBuild/cmake/debug/x86 --target native-lib",
+      "abi": "x86",
+      "output": "/Volumes/Macintosh HD 2/Zoorino GIT REPO/Zoo/Testing/GPS_COMPASS PLUGIN/AndroidStudio/app/build/intermediates/cmake/debug/obj/x86/libnative-lib.so"
+    }
+  }
+}
