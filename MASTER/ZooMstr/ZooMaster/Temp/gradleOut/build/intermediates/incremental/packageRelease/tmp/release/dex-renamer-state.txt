@@ -1,0 +1,4 @@
+#Fri Jul 19 14:23:43 CEST 2019
+base.0=/Users/ingaglotzbach/Documents/Uni/Semesterprojekt/Zoo/MASTER/ZooMstr/ZooMaster/Temp/gradleOut/build/intermediates/transforms/dexMerger/release/0
+path.0=classes.dex
+renamed.0=classes.dex
