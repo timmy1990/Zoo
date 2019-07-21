@@ -9978,7 +9978,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 4e-45}
+  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 8.671e-42, w: 1.05e-43}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -9994,7 +9994,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &788073847 stripped
 GameObject:
@@ -10050,6 +10050,16 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: -6057140222963153312, guid: 850f06c9d3dbd5d4daedf79c46ae1527,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 452e4b78f62ddb343ac74763a8455cb0, type: 2}
+    - target: {fileID: -6057140222963153312, guid: 850f06c9d3dbd5d4daedf79c46ae1527,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 850f06c9d3dbd5d4daedf79c46ae1527,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10088,7 +10098,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 850f06c9d3dbd5d4daedf79c46ae1527,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 850f06c9d3dbd5d4daedf79c46ae1527,
         type: 3}
@@ -10104,16 +10114,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.47800002
-      objectReference: {fileID: 0}
-    - target: {fileID: -6057140222963153312, guid: 850f06c9d3dbd5d4daedf79c46ae1527,
-        type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 452e4b78f62ddb343ac74763a8455cb0, type: 2}
-    - target: {fileID: -6057140222963153312, guid: 850f06c9d3dbd5d4daedf79c46ae1527,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 850f06c9d3dbd5d4daedf79c46ae1527, type: 3}
@@ -20157,10 +20157,10 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 3
 --- !u!65 &2117841360
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20201,7 +20201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textobject: {fileID: 0}
   updateGPStext: {fileID: 0}
-  speed: 1
+  speed: 0.5
   smooth: 5
 --- !u!114 &2117841363
 MonoBehaviour:
@@ -20210,7 +20210,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117841356}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bdb6e9033068ac46a6d73629b87f0a8, type: 3}
   m_Name: 
@@ -20229,7 +20229,7 @@ MeshCollider:
   m_GameObject: {fileID: 2117841356}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Convex: 0
   m_CookingOptions: 14
