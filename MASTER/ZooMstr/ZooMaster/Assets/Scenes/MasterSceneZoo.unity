@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.49641275, b: 0.57481736, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -9855,11 +9855,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bdb6e9033068ac46a6d73629b87f0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  target:
-  - {fileID: 1155348172}
-  - {fileID: 1315405698}
-  - {fileID: 1796515717}
+  speed: 0
+  target: []
 --- !u!54 &679265663
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -9978,7 +9975,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 1e-45, z: 8.671e-42, w: 1.05e-43}
+  m_BoundingSphereOverride: {x: 5.766e-42, y: 1.02e-43, z: NaN, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -10213,9 +10210,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aa96bb361564b224187f9c5bd9b7c066, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 679265661}
+  target: {fileID: 2117841358}
   smoothSpeed: 5
-  offset: {x: -22, y: 30, z: 40}
+  offset: {x: 0, y: 43.5, z: 70}
 --- !u!1 &1048081977
 GameObject:
   m_ObjectHideFlags: 0
@@ -20145,6 +20142,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 960653664}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2117841358 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 850f06c9d3dbd5d4daedf79c46ae1527,
+    type: 3}
+  m_PrefabInstance: {fileID: 960653664}
+  m_PrefabAsset: {fileID: 0}
 --- !u!54 &2117841359
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -20201,7 +20204,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textobject: {fileID: 0}
   updateGPStext: {fileID: 0}
-  speed: 0.5
+  speed: 1
   smooth: 5
 --- !u!114 &2117841363
 MonoBehaviour:
@@ -20215,11 +20218,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bdb6e9033068ac46a6d73629b87f0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  target:
-  - {fileID: 1155348172}
-  - {fileID: 1315405698}
-  - {fileID: 1796515717}
+  speed: 0
+  target: []
 --- !u!64 &2117841364
 MeshCollider:
   m_ObjectHideFlags: 0
