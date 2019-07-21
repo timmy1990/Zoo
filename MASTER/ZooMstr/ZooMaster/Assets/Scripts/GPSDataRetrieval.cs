@@ -130,7 +130,9 @@ void Update()
     if (oncePerSecond == 24)
     {
     double[] coordinates = fake.getGPS();
-    rigi.MovePosition(coordUtil.geo_to_enu(coordinates[0], coordinates[0], 50.0));
+    double[] convert = coordUtil.geo_to_enu(coordinates[0], coordinates[1], 50.0);
+    Vector3 pleaseMove = new Vector3((float)convert[0], 0, (float)convert[1]);
+    rigi.position = pleaseMove;
         oncePerSecond = 0;
     }
     oncePerSecond++;
@@ -138,7 +140,7 @@ void Update()
  }
 }
 
-/*
+/* coordUtil.geo_to_enu(coordinates[0], coordinates[0], 50.0)
 float distCovered = (Time.time - startTime) * speed;
 float fracJourney = distCovered / journeyLength;
 transform.position = Vector3.Lerp(startPos.position, endPos.position, fracJourney);
