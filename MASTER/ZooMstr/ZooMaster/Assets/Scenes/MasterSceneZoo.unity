@@ -213,11 +213,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_position: {x: -12, y: 27, z: -70}
-  m_precedingControlPointLocalPosition: {x: -1, y: -0, z: -0}
-  m_precedingControlPointPosition: {x: -13, y: 27, z: -70}
-  m_followingControlPointLocalPosition: {x: 1, y: 0, z: 0}
-  m_followingControlPointPosition: {x: -11, y: 27, z: -70}
-  m_handleMode: 2
+  m_precedingControlPointLocalPosition: {x: 6.5, y: 0.25, z: -6}
+  m_precedingControlPointPosition: {x: -5.5, y: 27.25, z: -76}
+  m_followingControlPointLocalPosition: {x: 6.5, y: 0.25, z: -6}
+  m_followingControlPointPosition: {x: -5.5, y: 27.25, z: -76}
+  m_handleMode: 0
 --- !u!1 &55508510
 GameObject:
   m_ObjectHideFlags: 0
@@ -5284,7 +5284,7 @@ GameObject:
   - component: {fileID: 189891768}
   - component: {fileID: 189891769}
   m_Layer: 0
-  m_Name: Point
+  m_Name: Icebear
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10406,7 +10406,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 408337452}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11, y: 25, z: -35}
+  m_LocalPosition: {x: -11, y: 27, z: -35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 652243644}
@@ -10424,12 +10424,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9cf9c5931a3b3c4ba456c8213d7ebfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_position: {x: -11, y: 25, z: -35}
-  m_precedingControlPointLocalPosition: {x: -1, y: 2, z: -0}
-  m_precedingControlPointPosition: {x: -12, y: 27, z: -35}
-  m_followingControlPointLocalPosition: {x: 1, y: -2, z: 0}
-  m_followingControlPointPosition: {x: -10, y: 23, z: -35}
-  m_handleMode: 2
+  m_position: {x: -11, y: 27, z: -35}
+  m_precedingControlPointLocalPosition: {x: 2, y: 0, z: 12.5}
+  m_precedingControlPointPosition: {x: -9, y: 27, z: -22.5}
+  m_followingControlPointLocalPosition: {x: 2, y: 0, z: 12.5}
+  m_followingControlPointPosition: {x: -9, y: 27, z: -22.5}
+  m_handleMode: 0
 --- !u!1001 &427020836
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15428,11 +15428,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_position: {x: -7, y: 25, z: -10}
-  m_precedingControlPointLocalPosition: {x: -1, y: -1.93, z: -0}
-  m_precedingControlPointPosition: {x: -8, y: 23.07, z: -10}
-  m_followingControlPointLocalPosition: {x: 1, y: 1.93, z: 0}
-  m_followingControlPointPosition: {x: -6, y: 26.93, z: -10}
-  m_handleMode: 2
+  m_precedingControlPointLocalPosition: {x: -2, y: 0, z: -12.5}
+  m_precedingControlPointPosition: {x: -9, y: 25, z: -22.5}
+  m_followingControlPointLocalPosition: {x: -2, y: 0, z: -12.5}
+  m_followingControlPointPosition: {x: -9, y: 25, z: -22.5}
+  m_handleMode: 0
 --- !u!4 &572500697 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400036, guid: 3ba44afe9035c5e409c30bae1ec51c36,
@@ -15802,11 +15802,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_position: {x: -12, y: 27, z: -70}
-  m_precedingControlPointLocalPosition: {x: -1, y: -0, z: -0}
-  m_precedingControlPointPosition: {x: -13, y: 27, z: -70}
-  m_followingControlPointLocalPosition: {x: 1, y: 0, z: 0}
-  m_followingControlPointPosition: {x: -11, y: 27, z: -70}
-  m_handleMode: 2
+  m_precedingControlPointLocalPosition: {x: 1.75, y: -0.25, z: -10.5}
+  m_precedingControlPointPosition: {x: -10.25, y: 26.75, z: -80.5}
+  m_followingControlPointLocalPosition: {x: 1.75, y: -0.25, z: -10.5}
+  m_followingControlPointPosition: {x: -10.25, y: 26.75, z: -80.5}
+  m_handleMode: 0
 --- !u!1 &695672458
 GameObject:
   m_ObjectHideFlags: 0
@@ -16133,11 +16133,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_position: {x: 1, y: 27.5, z: -82}
-  m_precedingControlPointLocalPosition: {x: -1, y: -0, z: -0}
-  m_precedingControlPointPosition: {x: 0, y: 27.5, z: -82}
-  m_followingControlPointLocalPosition: {x: 1, y: 0, z: 0}
-  m_followingControlPointPosition: {x: 2, y: 27.5, z: -82}
-  m_handleMode: 2
+  m_precedingControlPointLocalPosition: {x: -6.5, y: -0.25, z: 6}
+  m_precedingControlPointPosition: {x: -5.5, y: 27.25, z: -76}
+  m_followingControlPointLocalPosition: {x: -6.5, y: -0.25, z: 6}
+  m_followingControlPointPosition: {x: -5.5, y: 27.25, z: -76}
+  m_handleMode: 0
 --- !u!4 &854819126 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 2c561d09651f00e489d456f9ca8bb35a,
@@ -16188,11 +16188,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_position: {x: -8.5, y: 26.5, z: -91}
-  m_precedingControlPointLocalPosition: {x: -6.41, y: -0, z: 5.6}
-  m_precedingControlPointPosition: {x: -14.91, y: 26.5, z: -85.4}
-  m_followingControlPointLocalPosition: {x: 6.41, y: 0, z: -5.6}
-  m_followingControlPointPosition: {x: -2.0900002, y: 26.5, z: -96.6}
-  m_handleMode: 2
+  m_precedingControlPointLocalPosition: {x: -1.75, y: 0.25, z: 10.5}
+  m_precedingControlPointPosition: {x: -10.25, y: 26.75, z: -80.5}
+  m_followingControlPointLocalPosition: {x: -1.75, y: 0.25, z: 10.5}
+  m_followingControlPointPosition: {x: -10.25, y: 26.75, z: -80.5}
+  m_handleMode: 0
 --- !u!1001 &960653664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22548,7 +22548,7 @@ GameObject:
   - component: {fileID: 1795653956}
   - component: {fileID: 1795653957}
   m_Layer: 0
-  m_Name: Point
+  m_Name: Tiger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22581,10 +22581,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_position: {x: -13, y: 27, z: -50}
-  m_precedingControlPointLocalPosition: {x: 1, y: 0.28, z: 7.5}
-  m_precedingControlPointPosition: {x: -12, y: 27.28, z: -42.5}
-  m_followingControlPointLocalPosition: {x: 1, y: -1, z: 7.5}
-  m_followingControlPointPosition: {x: -12, y: 26, z: -42.5}
+  m_precedingControlPointLocalPosition: {x: 1, y: 0, z: 7.5}
+  m_precedingControlPointPosition: {x: -12, y: 27, z: -42.5}
+  m_followingControlPointLocalPosition: {x: 1, y: 0, z: 7.5}
+  m_followingControlPointPosition: {x: -12, y: 27, z: -42.5}
   m_handleMode: 0
 --- !u!1 &1796515716
 GameObject:
@@ -27569,7 +27569,7 @@ GameObject:
   - component: {fileID: 1989931454}
   - component: {fileID: 1989931455}
   m_Layer: 0
-  m_Name: Point
+  m_Name: Gorilla
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27583,7 +27583,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1989931453}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11, y: 25, z: -35}
+  m_LocalPosition: {x: -11, y: 27, z: -35}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1047565955}
@@ -27601,11 +27601,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9cf9c5931a3b3c4ba456c8213d7ebfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_position: {x: -11, y: 25, z: -35}
-  m_precedingControlPointLocalPosition: {x: -1, y: 1, z: -7.5}
-  m_precedingControlPointPosition: {x: -12, y: 26, z: -42.5}
-  m_followingControlPointLocalPosition: {x: -1, y: 3.14, z: -7.5}
-  m_followingControlPointPosition: {x: -12, y: 28.14, z: -42.5}
+  m_position: {x: -11, y: 27, z: -35}
+  m_precedingControlPointLocalPosition: {x: -1, y: 0, z: -7.5}
+  m_precedingControlPointPosition: {x: -12, y: 27, z: -42.5}
+  m_followingControlPointLocalPosition: {x: -1, y: 0, z: -7.5}
+  m_followingControlPointPosition: {x: -12, y: 27, z: -42.5}
   m_handleMode: 0
 --- !u!1 &1995506083
 GameObject:
@@ -27667,7 +27667,7 @@ GameObject:
   - component: {fileID: 2002280012}
   - component: {fileID: 2002280013}
   m_Layer: 0
-  m_Name: Point
+  m_Name: Tiger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27869,7 +27869,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2117841356}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4d5f23b1d52245bcba8ad3ac2aeca38, type: 3}
   m_Name: 

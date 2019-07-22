@@ -28,7 +28,7 @@ Dependencies:   - Two assets from the unity asset store are beeing used. Both ne
                 - Dijkstra Node -   https://github.com/EmpireWorld/unity-dijkstras-pathfinding
                 - Bezier Curves -   https://assetstore.unity.com/packages/tools/level-design/bezier-solution-113074
                                     https://github.com/yasirkula/UnityBezierSolution
- */
+*/
 
 using System.Collections;
 using System.Collections.Generic;

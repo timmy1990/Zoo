@@ -12,7 +12,7 @@ public class ZooPathRetriever : MonoBehaviour
         ZooPathCreator zpc = new ZooPathCreator();
         zpc.createPathFromCurrentPositionToFirstNode(rigi.transform.position);
         zpc.scanScene();
-        zpc.getShortestPath("Icebear");
+        zpc.getShortestPath("Ape");
         zpc.markShortestPathInScene();
     }
 
