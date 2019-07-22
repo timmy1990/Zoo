@@ -16,11 +16,10 @@ public class GPSDataRetrieval : MonoBehaviour
     private Rigidbody rigi;
     private Transform startPos;
     private Transform endPos;
-    public float speed = 1.0F;
+    public float speed = 10.0F;
     public float smooth = 5.0F;
-    private float journeyLength;
-    private float startTime;
-    string currentStartPoint;
+    private float t;
+    private float timer; 
     private int oncePerSecond = 0;
     private fakeGPS fake = new fakeGPS();
 
@@ -120,19 +119,25 @@ public class GPSDataRetrieval : MonoBehaviour
     }
 
     //rotation utility
-   /*double calcRotation(double degree) {
+   double calcRotation(double degree) {
         return degree;
-    }*/
+    }
+
 // Update is called once per frame
 
 void Update()
 {
     if (oncePerSecond == 24)
     {
-    double[] coordinates = fake.getGPS();
-    double[] convert = coordUtil.geo_to_enu(coordinates[0], coordinates[1], 26);
-    Vector3 pleaseMove = new Vector3((float)convert[0], 26, (float)convert[1]);
-    rigi.position = pleaseMove;
+        double[] coordinates = fake.getGPS();
+        double[] convert = coordUtil.geo_to_enu(coordinates[0], coordinates[1], 26);
+        t += Time.fixedDeltaTime;
+        Vector3 coordinate1 = new Vector3((float)convert[0], 26,0);
+        Vector3 coordinate2 = new Vector3(0, 26, (float)convert[1]);
+        Vector3 moveMe = Vector3.Lerp(coordinate1, coordinate2,t);
+        //Vector3 pleaseMove = new Vector3((float)convert[0], 26, (float)convert[1]); 
+        rigi.position = moveMe;
+        //rigi.position = pleaseMove; 
         oncePerSecond = 0;
     }
     oncePerSecond++;
@@ -140,14 +145,5 @@ void Update()
  }
 }
 
-/* coordUtil.geo_to_enu(coordinates[0], coordinates[0], 50.0)
-float distCovered = (Time.time - startTime) * speed;
-float fracJourney = distCovered / journeyLength;
-transform.position = Vector3.Lerp(startPos.position, endPos.position, fracJourney);
-if (fracJourney >= 1f && currentStartPoint + 1 < coordinates.Length)
-{
-    currentStartPoint++;
-    SetPoints();
-}*/
 
 
