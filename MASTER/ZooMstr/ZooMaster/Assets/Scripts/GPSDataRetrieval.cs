@@ -14,16 +14,10 @@ public class GPSDataRetrieval : MonoBehaviour
     public AndroidJavaObject gpsInstance;
     public AndroidJavaObject contextUnit;
     private Rigidbody rigi;
-    private Transform startPos;
-    private Transform endPos;
-    public float speed = 10.0F;
-    public float smooth = 5.0F;
-    private float t;
-    private float timer; 
     private int oncePerSecond = 0;
     private fakeGPS fake = new fakeGPS();
 
-
+    private float speed = 10.0F;
 
     // Variables for Coordinatetransformation - Entrance Zoo Nürnberg
     double tmplat = 49.450199;
@@ -31,18 +25,19 @@ public class GPSDataRetrieval : MonoBehaviour
     private CoordinateUtilities coordUtil;
     double tmpDegree = 0;
 
+    // Lerping
+    private float lastTime;
+    private int index = 0;
+    private float strecke = 0;
 
     // Start is called before the first frame update
     void Start()
     {
-
         // get reference to player Instance for transformations
-
         rigi = GetComponent<Rigidbody>();
 
         // Initialize with Startpoint
         coordUtil = new CoordinateUtilities(tmplat, tmplon, 0.00);
-
 
         // Testing if it works
         double[] enu2 = coordUtil.geo_to_enu(tmplat, tmplon, 0.00);
@@ -55,16 +50,12 @@ public class GPSDataRetrieval : MonoBehaviour
             Permission.RequestUserPermission("android.permission.ACCESS_COARSE_LOCATION");
             Permission.RequestUserPermission("android.permission.TYPE_ORIENTATION");
         }
-    }
 
-    /*void SetPoints()
-    {
-        startPos = coordinates[currentStartPoint];
-        endPos = coordinates[currentStartPoint + 1];
-        startTime = Time.time;
-        journeyLength = Vector3.Distance(startPos.position, endPos.position);
+        // initialize lerping
+        lastTime = Time.time;
+        int index = 0;
+        float strecke = 0;
     }
-    */
 
     public void activateGPSData()
     {
@@ -123,26 +114,39 @@ public class GPSDataRetrieval : MonoBehaviour
         return degree;
     }
 
-// Update is called once per frame
-
-void Update()
-{
-    if (oncePerSecond == 24)
+    // Update is called once per frame
+    void Update()
     {
-        double[] coordinates = fake.getGPS();
-        double[] convert = coordUtil.geo_to_enu(coordinates[0], coordinates[1], 26);
-        t += Time.fixedDeltaTime;
-        Vector3 coordinate1 = new Vector3((float)convert[0], 26,0);
-        Vector3 coordinate2 = new Vector3(0, 26, (float)convert[1]);
-        Vector3 moveMe = Vector3.Lerp(coordinate1, coordinate2,t);
-        //Vector3 pleaseMove = new Vector3((float)convert[0], 26, (float)convert[1]); 
-        rigi.position = moveMe;
-        //rigi.position = pleaseMove; 
-        oncePerSecond = 0;
-    }
-    oncePerSecond++;
+        Debug.Log("Lerp: index=" + index + " strecke=" + strecke);
 
- }
+        // Retrieve fakeGPS Data from dictionary
+        float height = 50;
+        double[] latlon1 = fake.getGPS(index);
+        double[] latlon2 = fake.getGPS(index+1);
+        double[] pos1 = coordUtil.geo_to_enu((float)latlon1[0], (float)latlon1[1], height);
+        double[] pos2 = coordUtil.geo_to_enu((float)latlon2[0], (float)latlon2[1], height);
+
+        // LERP
+        Vector3 v1 = new Vector3((float)pos1[0], (float)pos1[2], (float)pos1[1]);
+        Vector3 v2 = new Vector3((float)pos2[0], (float)pos2[2], (float)pos2[1]);
+        float delta = Vector3.Distance(v1, v2);
+        float w = strecke / delta;
+        rigi.transform.position = (1 - w) * v1 + w * v2;
+
+        // update for next lerp
+        float dt = Time.time - lastTime;
+        lastTime = Time.time;
+        strecke += speed * dt;
+        if (strecke > delta) {
+            index++;
+            strecke -= delta;
+        }
+        int n = fake.getNumPoints();
+        if (index >= n-1) {
+            index = 0;
+            strecke = 0;
+        }
+    }
 }
 
 

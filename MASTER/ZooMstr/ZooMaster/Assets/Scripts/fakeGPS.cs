@@ -32,8 +32,8 @@ public class fakeGPS
        {24, new[] { 49.4491565, 11.1390574 } },
        {25, new[] { 49.4491094, 11.139048 } },
        {26, new[] { 49.4490719, 11.1390614 } },
-       {27, new[] { 49.4490431, 11.1391084 } } };
-       /*{28, new[] { 49.4490222,11.1391754} },
+       {27, new[] { 49.4490431, 11.1391084 } }, 
+       {28, new[] { 49.4490222,11.1391754} },
        {29, new[] { 49.4489952,11.1392371 } },
        {30, new[] { 49.4489673, 11.1393082 } },
        {31, new[] {49.4489437,11.13939 } },
@@ -72,20 +72,16 @@ public class fakeGPS
        {64, new[] { 49.4482374, 11.1414085 } },
        {65, new[] {49.4481921,11.1414166 } },
        {67, new[] {49.4481119, 11.141407 } },
-       {68, new[] { 49.448989,11.1390708} }};*/
+       {68, new[] { 49.448989,11.1390708} }};
 
-    private static int momentanerWert = 0;
-
-
-    public double[] getGPS()
+    public double[] getGPS(int index)
     {
-        double[] tmp = fakeCoordinates[momentanerWert];
-        momentanerWert++;
+        double[] tmp = fakeCoordinates[index];
         return tmp;
     }
 
+    public int getNumPoints()
+    {
+        return(fakeCoordinates.Count);
+    }
 }
-
-        
-
-
