@@ -17,7 +17,7 @@ public class GPSDataRetrieval : MonoBehaviour
     private int oncePerSecond = 0;
     private fakeGPS fake = new fakeGPS();
 
-    private float speed = 10.0F;
+    private float speed = 30.0F;
 
     // Variables for Coordinatetransformation - Entrance Zoo Nürnberg
     double tmplat = 49.450199;
@@ -120,7 +120,7 @@ public class GPSDataRetrieval : MonoBehaviour
         Debug.Log("Lerp: index=" + index + " strecke=" + strecke);
 
         // Retrieve fakeGPS Data from dictionary
-        float height = 50;
+        float height = 100;
         double[] latlon1 = fake.getGPS(index);
         double[] latlon2 = fake.getGPS(index+1);
         double[] pos1 = coordUtil.geo_to_enu((float)latlon1[0], (float)latlon1[1], height);
@@ -131,7 +131,13 @@ public class GPSDataRetrieval : MonoBehaviour
         Vector3 v2 = new Vector3((float)pos2[0], (float)pos2[2], (float)pos2[1]);
         float delta = Vector3.Distance(v1, v2);
         float w = strecke / delta;
-        rigi.transform.position = (1 - w) * v1 + w * v2;
+        Vector3 p = (1 - w) * v1 + w * v2;
+        RaycastHit hit;
+        if (Physics.Raycast(p,new Vector3(0,-1,0), out hit, 1000)) { 
+         p = hit.point;
+        }
+        Debug.Log("Raycast =" + p);
+        rigi.transform.position = p;
 
         // update for next lerp
         float dt = Time.time - lastTime;
